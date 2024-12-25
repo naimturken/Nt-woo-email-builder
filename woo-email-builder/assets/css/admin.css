@@ -1,0 +1,206 @@
+/* Ana Konteyner */
+.lyeb-container {
+    display: flex;
+    margin-top: 20px;
+    background: #fff;
+    min-height: calc(100vh - 120px);
+}
+
+/* Sol Panel */
+.lyeb-sidebar {
+    width: 300px;
+    background: #f8f9fa;
+    border-right: 1px solid #e2e4e7;
+    flex-shrink: 0;
+}
+
+.lyeb-section {
+    padding: 20px;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.lyeb-section h2 {
+    margin: 0 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lyeb-section h3 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+}
+
+/* Element Grupları */
+.lyeb-element-group {
+    margin-bottom: 20px;
+}
+
+.lyeb-element,
+.lyeb-variable {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #e2e4e7;
+    border-radius: 4px;
+    cursor: move;
+    transition: all 0.2s ease;
+}
+
+.lyeb-element:hover,
+.lyeb-variable:hover {
+    background: #f0f0f0;
+    border-color: #8CC63F;
+}
+
+/* Ana İçerik */
+.lyeb-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.lyeb-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fff;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.lyeb-toolbar button {
+    margin-left: 10px;
+}
+
+.lyeb-toolbar button:first-child {
+    margin-left: 0;
+}
+
+.lyeb-toolbar .dashicons {
+    margin-right: 5px;
+}
+
+/* Builder Alanı */
+.lyeb-builder {
+    flex: 1;
+    padding: 20px;
+    background: #f8f9fa;
+    overflow-y: auto;
+}
+
+/* Sağ Panel */
+.lyeb-settings-panel {
+    width: 300px;
+    background: #fff;
+    border-left: 1px solid #e2e4e7;
+    flex-shrink: 0;
+}
+
+.lyeb-settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.lyeb-settings-header h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lyeb-settings-content {
+    padding: 20px;
+}
+
+/* Element Stilleri */
+.lyeb-element[data-type="header"],
+.lyeb-element[data-type="footer"] {
+    background: #8CC63F;
+    color: #fff;
+}
+
+.lyeb-element[data-type="button"] {
+    background: #E57373;
+    color: #fff;
+}
+
+/* Sürükle & Bırak Göstergeleri */
+.lyeb-dropzone {
+    border: 2px dashed #8CC63F;
+    min-height: 50px;
+    margin: 10px 0;
+    background: rgba(140, 198, 63, 0.1);
+}
+
+.lyeb-element.ui-draggable-dragging {
+    width: 200px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive Tasarım */
+@media screen and (max-width: 1200px) {
+    .lyeb-settings-panel {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 100;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .lyeb-container {
+        flex-direction: column;
+    }
+    
+    .lyeb-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e4e7;
+    }
+}
+
+/* LezzetYurdu Özel Stilleri */
+.lyeb-header {
+    background: #8CC63F;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.lyeb-footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.lyeb-button {
+    background: #E57373;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.lyeb-social-icons {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.lyeb-social-icons a {
+    margin: 0 5px;
+    color: #8CC63F;
+}
+
